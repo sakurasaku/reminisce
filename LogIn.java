@@ -38,7 +38,7 @@ implements OnClickListener{
 		
 		db = (new DatabaseOpenHelper(this)).getWritableDatabase();
 		
-		// “o˜^‚³‚ê‚Ä‚¢‚é‘S“ú‹L‚ğæ“¾‚µƒŠƒXƒgƒAƒ_ƒvƒ^‚ğì¬‚·‚éB
+		// ï¿½oï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½Sï¿½ï¿½ï¿½Lï¿½ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½gï¿½Aï¿½_ï¿½vï¿½^ï¿½ï¿½ï¿½ì¬ï¿½ï¿½ï¿½ï¿½ï¿½B
 		getPassword();
 		
 		
@@ -46,54 +46,41 @@ implements OnClickListener{
 	}
 	
 	/** 
-	 * “o˜^‚³‚ê‚Ä‚¢‚éƒpƒXƒ[ƒh‚ğæ“¾‚·‚éƒƒ\ƒbƒh
+	 * ï¿½oï¿½^ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½pï¿½Xï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½éƒï¿½\ï¿½bï¿½h
 	 */
 	public void getPassword(){
 
-		// queryƒƒ\ƒbƒh‚ÅƒJ[ƒ\ƒ‹‚ğæ“¾
+		// queryï¿½ï¿½ï¿½\ï¿½bï¿½hï¿½ÅƒJï¿½[ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½æ“¾
 		c = db.query("password", null, null, null, null, null, null);
 		
 		
 		c.moveToFirst();
 
 		list = new CharSequence[c.getCount()];
-		for (int i = 0; i < list.length; i++) {		//ƒŠƒXƒg‚ÌƒŒƒ“ƒOƒX‚Í‚±‚Ìê‡‚P‚µ‚©‚È‚¢B
-		    list[i] = c.getString(2);				//ƒpƒXƒ[ƒh‚Í‚R—ñ–Ú‚ÌƒJƒ‰ƒ€‚¾‚©‚çˆø”‚ª‚Q‚É‚È‚é
+		for (int i = 0; i < list.length; i++) {	
+		    list[i] = c.getString(2);		
 		    c.moveToNext();
 		}
 		c.close();
-		
-//		editText1.setText(list[0]);
-		
-/*		
-		if(c.moveToFirst()){
-			do{
-				long id = c.getLong(c.getColumnIndex(g_idh));
-				value = c.getString(c.getColumnIndex(gnumberh));
-//			@@@@System.out.println(id + g:h + bookmark);
-			}while(c.moveToNext());
-		}
-*/
-
 			
 	}
 
 	@Override
 	public void onClick(View v) {
-		// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
+		// TODO ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½ï¿½ï¿½\ï¿½bï¿½hï¿½Eï¿½Xï¿½^ï¿½u
 		
 		if(v == button1){
 			
-			//“ü—Í‚µ‚½•¶š‚ğƒg[ƒXƒgo—Í‚·‚é
+			//ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½[ï¿½Xï¿½gï¿½oï¿½Í‚ï¿½ï¿½ï¿½
 			String answer = editText1.getText().toString();
 			
 		
 			if(list[0].equals(answer)){
 				Toast.makeText(LogIn.this, 
-				"ƒƒOƒCƒ“‚µ‚Ü‚·", 
+				"ï¿½ï¿½ï¿½Oï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½", 
 				Toast.LENGTH_LONG).show();
 				
-				// ƒƒCƒ“ƒAƒNƒeƒBƒrƒeƒB[‚É‘JˆÚiˆÚ“®‚·‚éj
+				// ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Aï¿½Nï¿½eï¿½Bï¿½rï¿½eï¿½Bï¿½[ï¿½É‘Jï¿½Úiï¿½Ú“ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½j
 				Intent intent = new Intent();
 				intent.setClassName("com.ams.reminisce","com.ams.reminisce.ReminisceActivity");
 				startActivity(intent);
@@ -101,7 +88,7 @@ implements OnClickListener{
 			}
 			else{
 				Toast.makeText(LogIn.this, 
-				"password‚ªˆá‚¢‚Ü‚·", 
+				"passwordï¿½ï¿½ï¿½á‚¢ï¿½Ü‚ï¿½", 
 				Toast.LENGTH_LONG).show();
 			}
 		}
