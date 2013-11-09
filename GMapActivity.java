@@ -44,27 +44,6 @@ implements OnClickListener{
         OverlayItem overlayitem2 = new OverlayItem(point2, "", "");
         
         
-        
-        
-        
-/* ------------------@ZŠ‚©‚çGeoƒ|ƒCƒ“ƒg‚ğæ“¾‚·‚éƒR[ƒhB@New ‚·‚éƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ªEEE  ---------------------      
-        String strAddress = "“Œ‹“sa’J‹æ‘ãX–Ø_‰€’¬";
-        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
-        try {
-            List<Address> addressList = geocoder.getFromLocationName(strAddress, 1);
-            if (!addressList.isEmpty()) {
-                Address address = addressList.get(0);
-                double latitude = address.getLatitude() * 1E6;
-                double longitude = address.getLongitude() * 1E6;
-                GeoPoint point3 = new GeoPoint(latitude.intValue(), longitude.intValue());
-                OverlayItem overlayitem3 = new OverlayItem(point3, "", "");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-------------------------------------------------------------------------------------------*/
-        
-        
         itemizedOverlay.addOverlay(overlayitem);
         mapOverlays.add(itemizedOverlay);
         
@@ -72,13 +51,13 @@ implements OnClickListener{
 
 	@Override
 	protected boolean isRouteDisplayed() {
-		// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
+		// TODO ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½ï¿½ï¿½\ï¿½bï¿½hï¿½Eï¿½Xï¿½^ï¿½u
 		return false;
 	}
 
 	@Override
 	public void onClick(View v) {
-		// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
+		// TODO ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½ï¿½ï¿½\ï¿½bï¿½hï¿½Eï¿½Xï¿½^ï¿½u
 		
 		if (v == btn){
             GeoPoint savePoint = mapView.getMapCenter();
